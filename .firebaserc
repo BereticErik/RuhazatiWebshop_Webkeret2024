@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "beretic-webkert2024": {
+      "hosting": {
+        "ruhazatiwebshopwebkert2024": [
+          "beretic-webkert2024"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "beretic-webkert2024"
+  }
+}

@@ -1,0 +1,26 @@
+<div class="bg">
+  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="box-head">
+      <h2>Saját profil</h2>
+    </div>
+    <div class="box">
+      <form [formGroup]="profileForm" (ngSubmit)="updateUser()">
+        <div>
+          <h3>Username:</h3>
+          <input type="text" formControlName="username">
+        </div>
+        <div>
+          <h3>Email:</h3>
+          <input type="email" formControlName="email">
+        </div>
+        <div formGroupName="name">
+          <h3>First Name:</h3>
+          <input type="text" formControlName="firstname">
+          <h3>Last Name:</h3>
+          <input type="text" formControlName="lastname">
+        </div>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

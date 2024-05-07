@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - BereVintage Clothing</title>
+</head>
+<body>
+<div class="bg">
+  <div class="container">
+    <header class="header">Shopping Cart</header>
+    <div class="cart-items">
+      <div class="cart-item" *ngFor="let item of items">
+        <img [src]="item.imageUrl" alt="Product">
+        <div class="cart-item-details">
+          <h3>{{ item.name }}</h3>
+          <p>Price: ${{ item.price }}</p>
+          <p>Quantity: {{ item.quantity }}</p>
+        </div>
+        <div class="cart-item-price">${{ item.price * item.quantity }}</div>
+      </div>
+    </div>
+    <div class="total-price">Total: ${{ totalPrice }}</div>
+    <button class="clear-btn" (click)="clearCart()">Clear Cart</button>
+    <a href="#" class="checkout-btn">Proceed to Checkout</a>
+  </div>
+</div>
+</body>
+</html>

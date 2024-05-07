@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "ruhazatiwebshopwebkert2024",
+    "public": "dist/ruhazatiwebshopwebkert2024/browser",
+    "frameworks": {
+      "backend": {
+        "region": "europe-west1"
+      }
+    }
+  }
+}

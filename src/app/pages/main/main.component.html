@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BereVintage Clothing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    /* Background styles */
+    .bg {
+      padding-top: 5px;
+      margin: 0 auto;
+      width: 100%;
+      background: rgb(63, 81, 181);
+      background: linear-gradient(0deg, rgba(254, 254, 254, 1) 0%, rgba(63, 81, 181, 1) 100%);
+      border-style: initial;
+      border-width: 5px;
+      border-color: #242020;
+    }
+
+    /* Header styles */
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      color: #fff;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Card styles */
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Product styles */
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .product-item {
+      width: calc(33.33% - 20px);
+      margin-bottom: 20px;
+    }
+
+    .product-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-item h3 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .product-item p {
+      margin-top: 5px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+<div class="bg">
+  <div class="container">
+    <header class="header">BereVintage Clothing</header>
+    <div class="product">
+      <div class="product-item" *ngFor="let cloth of clothes">
+        <img [src]="getClothingImage(cloth.name)" alt="Product">
+        <h3>{{cloth.name}}</h3>
+        <p>${{cloth.price}}</p>
+        <button (click)="addToCart(cloth)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

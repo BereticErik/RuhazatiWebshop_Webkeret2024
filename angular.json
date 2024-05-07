@@ -50,7 +50,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "1.3mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -103,6 +103,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "ruhazatiwebshopwebkert2024:build:production",
+              "serveTarget": "ruhazatiwebshopwebkert2024:serve:production"
+            },
+            "development": {
+              "buildTarget": "ruhazatiwebshopwebkert2024:build:development",
+              "serveTarget": "ruhazatiwebshopwebkert2024:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
